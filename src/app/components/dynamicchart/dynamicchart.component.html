@@ -1,0 +1,5 @@
+<div *ngIf="isLoading">Loading chart data...</div>
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="!isLoading && !error">
+  <div echarts [options]="chartOption" class="chart-container" *ngIf="chartOption"></div>
+</div>
