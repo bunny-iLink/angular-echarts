@@ -1,16 +1,41 @@
+// src/app/services/chart.service.ts
 import { Injectable } from '@angular/core';
-import { ChartData } from '../models/chart-data.model';
+import { RealWorldMetric } from '../models/chart-data.model';
 
-@Injectable({ providedIn: 'root' }) //i can use this service all over the application..its global
+@Injectable({ providedIn: 'root' })
 export class ChartService {
-  getTechUsageData(): ChartData[] {
+  getUpdatedTechUsageData(): RealWorldMetric[] {
     return [
-      { category: 'Coding', value: 35, extraInfo: 'Feature development, debugging' },
-      { category: 'Meetings', value: 25, extraInfo: 'Team syncs and planning' },
-      { category: 'Emails/Comms', value: 10, extraInfo: 'Communication and follow-ups' },
-      { category: 'Learning', value: 15, extraInfo: 'Upskilling, documentation, courses' },
-      { category: 'Breaks', value: 15, extraInfo: 'Rest and refresh' }
-    ]
-      ;
+      {
+        label: 'Organic Search',
+        percentage: 45,
+        description: 'Visitors who came via search engines',
+        colorCode: '#4e79a7'
+      },
+      {
+        label: 'Direct',
+        percentage: 20,
+        description: 'Users who typed the URL directly into the browser',
+        colorCode: '#f28e2b'
+      },
+      {
+        label: 'Referral',
+        percentage: 15,
+        description: 'Traffic from external websites linking to ours',
+        colorCode: '#e15759'
+      },
+      {
+        label: 'Social Media',
+        percentage: 10,
+        description: 'Traffic from platforms like Facebook, Twitter, LinkedIn',
+        colorCode: '#76b7b2'
+      },
+      {
+        label: 'Email Campaigns',
+        percentage: 10,
+        description: 'Users coming from marketing newsletters',
+        colorCode: '#59a14f'
+      }
+    ];
   }
 }

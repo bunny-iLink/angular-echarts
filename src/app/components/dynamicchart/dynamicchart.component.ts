@@ -10,7 +10,8 @@ import { CovidDataService } from '../../services/covid-data.service';
   imports: [
     CommonModule,
     NgxEchartsModule
-  ]
+  ],
+  styleUrls: ['./dynamicchart.component.css']
 })
 export class DynamicChartComponent implements OnInit, AfterViewInit {
   chartOption: any;

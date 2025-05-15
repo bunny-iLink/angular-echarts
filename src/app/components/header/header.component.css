@@ -94,6 +94,11 @@
   animation: pulse 4s ease-in-out infinite;
 }
 
+.description {
+  white-space: pre-line; /* For line breaks if not using innerHTML */
+  text-align: left;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {

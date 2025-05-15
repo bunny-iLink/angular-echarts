@@ -1,5 +1,12 @@
 <div *ngIf="isLoading">Loading chart data...</div>
 <div *ngIf="error">{{ error }}</div>
+
 <div *ngIf="!isLoading && !error">
-  <div echarts [options]="chartOption" class="chart-container" *ngIf="chartOption"></div>
+  <div class="chart-title">
+    <h2>COVID-19 Regional Data Overview</h2>
+  </div>
+  <div class="chart-description">
+    <p>This bar chart shows the total confirmed COVID-19 cases by state for the latest available date.</p>
+  </div>
+  <div echarts [options]="chartOption" class="chart-box" *ngIf="chartOption"></div>
 </div>

@@ -1,15 +1,100 @@
 :host {
   display: block;
   padding: 20px;
-  background: #ffffff;
+  background: linear-gradient(160deg, #1a1a2e, #16213e);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: auto;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: "Fira Code", monospace;
+}
+
+.chart-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0f3460;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+select:hover {
+  background-color: #1a4d7a;
+}
+
+select:focus {
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4);
 }
 
 .chart-box {
   width: 100%;
-  height: 60vh; /* Responsive height based on viewport */
+  height: 60vh;
   min-height: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.metrics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.metric-card {
+  flex: 1 1 250px;
+  border-left: 6px solid;
+  background-color: #0f3460;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s;
+  color: #ffffff;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  background-color: #1a4d7a;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.metric-label,
+.metric-percentage {
+  font-size: 16px;
+}
+
+.metric-description {
+  color: #dcdcdc;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+h2 {
+  color: #ff4f81
 }

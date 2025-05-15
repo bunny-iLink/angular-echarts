@@ -1,34 +1,61 @@
-<div class="home-container">
-  <!-- Hero Section -->
-  <section class="hero-banner">
-    <h1 class="hero-title">Boost Your Productivity with Angular Insights</h1>
-    <p class="hero-subtitle">
-      Unlock powerful visualizations using modern charting tools and real-time data integrations.
-    </p>
-    <!--<button class="get-started-btn" (click)="navigateTo('static')">🚀 Get Started</button>-->
-  </section>
+<!-- Header Component -->
+<app-header></app-header>
 
-  <!-- Description -->
-  <p class="home-description">
-    Explore the architecture of Angular while transforming your productivity into vibrant, interactive charts using both static datasets and live API feeds.
+<section class="hero-banner">
+  <h1 class="hero-title">Boost Your Productivity with Angular & ECharts</h1>
+  <p class="hero-subtitle">
+    Unlock the full potential of your data by transforming raw numbers into compelling, interactive visualizations with
+    the combined power of <strong>Apache ECharts</strong> and <strong>Angular</strong>. Whether you're building
+    dashboards, performance monitors, or analytics tools, this integration enables you to craft real-time, responsive
+    charts that adapt seamlessly to your application's data flow. Benefit from Angular's modular structure and component
+    architecture while leveraging ECharts' robust charting capabilities — including bar, line, pie, radar, and more —
+    all rendered with smooth animations, dynamic updates, and rich interactivity for a next-level user experience.
   </p>
 
-  <!-- Card Section -->
-  <div class="card-container">
+  <!--<button class="get-started-btn" (click)="navigateTo('static')">🚀 Get Started</button>-->
+</section>
+
+<!-- Main Container -->
+<div class="home-container">
+  <!-- Detailed Description -->
+  <section class="home-description">
+    <p>
+      Visualize your ideas, metrics, and KPIs like never before. Our platform leverages the flexibility of Angular with
+      the robust
+      charting capabilities of Apache ECharts to deliver powerful, dynamic, and visually engaging dashboards.
+    </p>
+    <p>
+      Whether you're analyzing static datasets or streaming live data from APIs, our tools empower you to turn numbers
+      into insights and
+      insights into action. Designed for developers, analysts, and decision-makers alike — it's your gateway to smart,
+      scalable data visualization.
+    </p>
+  </section>
+
+  <!-- Card Section: Choose Data Mode -->
+  <section class="card-container">
+
     <!-- Static Data Card -->
     <div class="data-card" (click)="navigateTo('static')">
       <div class="card-icon">📊</div>
-      <h2 class="card-title">Static Data</h2>
-      <p class="card-description">Dive into curated datasets and watch your productivity come to life with ECharts visualizations.</p>
-      <span class="card-action">View Charts →</span>
+      <h2 class="card-title">Static Data Charts</h2>
+      <p class="card-description">
+        Start with curated and structured datasets to explore fundamental chart types, learn configuration techniques,
+        and build insightful visualizations using bar, pie, and line charts.
+      </p>
+      <span class="card-action">Start with Static Data →</span>
     </div>
 
     <!-- Dynamic Data Card -->
     <div class="data-card" (click)="navigateTo('dynamic')">
       <div class="card-icon">🔄</div>
-      <h2 class="card-title">Dynamic Data</h2>
-      <p class="card-description">Connect with real-time APIs and get instant updates on your performance metrics.</p>
-      <span class="card-action">Explore Live Data →</span>
+      <h2 class="card-title">Live API Integrations</h2>
+      <p class="card-description">
+        Connect with real-time APIs to visualize live metrics and monitor changing data streams.
+        Perfect for dashboards that need up-to-the-minute performance and system tracking.
+      </p>
+      <span class="card-action">Explore Dynamic Charts →</span>
     </div>
-  </div>
+
+  </section>
 </div>

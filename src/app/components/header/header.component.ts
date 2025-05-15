@@ -7,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  title = 'Apache ECharts: Interactive, Customizable Charting Library for Modern Web Applications';
+  description = `
+  <strong>Apache ECharts</strong> is an open-source JavaScript visualization library for building interactive, highly customizable charts for the web.
 
-  title = 'My Daily Focus Tracker';
-  description = 'Gain insights into how I spend my day — monitor time spent on tasks, track progress, and identify areas for improvement. This app helps me stay focused and productive by providing a clear overview of my daily activities. With this tool, I can easily analyze my time usage and make informed decisions to enhance my productivity.';
+  <strong>✨ Key Features:</strong><br/>
+  • Wide variety of chart types
+  • Smooth interactivity (tooltips, zoom, brush)
+  • Fully customizable styles and themes
+  • Responsive and high-performance rendering
+  • Cross-browser and cross-platform compatibility
+  • Declarative, data-driven configuration
+  • Accessible and internationalization-ready
+  • Modular and extensible architecture
+
+  Ideal for dashboards, real-time data monitoring, financial charts, and any rich web-based visualization needs.
+`;
 }

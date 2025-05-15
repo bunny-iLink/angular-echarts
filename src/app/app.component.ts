@@ -1,17 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // ✅ Import RouterModule
-import { HeaderComponent } from './components/header/header.component';
+import { RouterModule, Router } from '@angular/router'; 
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterModule,           // ✅ Add this line
-    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
+  constructor() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }
+
   title = 'E-charts';
 }

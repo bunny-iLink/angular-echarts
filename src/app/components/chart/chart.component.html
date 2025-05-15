@@ -1,11 +1,16 @@
+<div class="chart-header">
+  <h2 class="chart-title">Website Traffic Analysis</h2>
+  <p class="chart-description">
+    This chart represents the breakdown of website traffic sources and their respective percentages.
+  </p>
+</div>
+
 <div class="chart-controls">
   <label for="chartType">Chart Type:</label>
-
   <select id="chartType" (change)="onChartTypeChange($event)">
-
+    <option value="pie">Pie</option>
     <option value="bar">Bar</option>
     <option value="line">Line</option>
-    <option value="pie">Pie</option>
   </select>
 </div>
 
