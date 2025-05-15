@@ -1,186 +1,204 @@
-/* Global Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 
+/* Body */
 body {
-  background: #faf4f0; /* Soft, light peach background */
-  color: #333;
-  line-height: 1.6;
+  background: linear-gradient(160deg, #0a0a0a, #0f0c29);
+  color: #f0f0f0;
   font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Home Container */
 .home-container {
-  padding: 2rem 2rem;
+  padding: 2.5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Hero Section */
+/* Hero Banner */
 .hero-banner {
+  background: linear-gradient(160deg, #1a1a2e, #16213e);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.6);
   text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(135deg, #F8D7D0, #F3E4D4); /* Soft peach gradient */
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  color: #5d3a2e;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1.2s ease-out;
+  color: #e0e0e0;
 }
 
 .hero-title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 1rem;
+  color: #ff4f81; /* Vibrant pink */
+  text-shadow: 0 0 10px rgba(255, 79, 129, 0.4);
 }
 
 .hero-subtitle {
   font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 2rem;
-  color: rgba(93, 58, 46, 0.8); /* Softer text color */
+  color: #d0d0d0;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 
+/* Optional Button */
 .get-started-btn {
-  background-color: #ff8a5c; /* Warm coral tone */
-  color: white;
+  background: #ff4f81;
+  color: #ffffff;
+  padding: 1rem 2.2rem;
+  font-size: 1.1rem;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(255, 79, 129, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-  .get-started-btn:hover {
-    background-color: #ff6f47; /* Slightly darker coral */
-    transform: translateY(-5px);
-  }
+.get-started-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 79, 129, 0.6);
+}
 
 /* Home Description */
 .home-description {
   text-align: center;
   font-size: 1.2rem;
-  margin-bottom: 3rem;
-  color: #444;
+  color: #020202;
   line-height: 1.8;
+  margin: 3rem auto;
+  max-width: 900px;
 }
 
-/* Card Section */
+/* Card Container */
 .card-container {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   margin-bottom: 3rem;
 }
 
+/* Data Cards */
 .data-card {
-  background-color: white;
-  padding: 2.5rem;
-  width: 350px; /* Increased width of cards */
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  width: 340px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #1a1a2e, #16213e);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   text-align: center;
-  animation: fadeInUp 0.5s ease-in-out;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
-  .data-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  }
+.data-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 60px rgba(255, 79, 129, 0.3);
+}
 
+/* Card Content */
 .card-icon {
-  font-size: 3.5rem;
-  color: #f68f58; /* Warm orange for card icons */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #7fddff; /* Bright aqua */
+  text-shadow: 0 0 12px rgba(127, 221, 255, 0.6);
 }
 
 .card-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  color: #5d3a2e; /* Soft brown for titles */
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 .card-description {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 1rem;
-  color: #666;
+  font-size: 1rem;
+  color: #c0c0c0;
+  margin-bottom: 1rem;
 }
 
 .card-action {
+  color: #7fddff;
   font-weight: bold;
-  color: #f68f58; /* Matches card icon color */
-  cursor: pointer;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-  .card-action:hover {
-    color: #d87441; /* Darker shade of orange */
-  }
+.card-action:hover {
+  color: #54d8ff;
+}
 
 /* Tips Section */
 .tips-section {
-  background-color: #ffebd4; /* Light peach background */
-  padding: 2rem;
   margin-top: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  color: #dddddd;
 }
 
 .tip-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .tip-icon {
-  font-size: 2.5rem;
-  color: #f68f58; /* Consistent warm color */
-}
-
-.tip-text {
-  max-width: 600px;
+  font-size: 2.2rem;
+  color: #ff4f81;
+  text-shadow: 0 0 10px rgba(255, 79, 129, 0.4);
 }
 
 .tip-message {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: #5d3a2e; /* Soft brown for text */
-  margin-bottom: 1rem;
+  max-width: 600px;
+  color: #eeeeee;
 }
 
 .integration-list {
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
   padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1.2rem;
 }
 
-  .integration-list li a {
-    color: #f68f58; /* Consistent color with icon */
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.integration-list li a {
+  color: #7fddff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    .integration-list li a:hover {
-      color: #d87441; /* Darker orange shade */
-      text-decoration: underline;
-    }
+.integration-list li a:hover {
+  color: #54d8ff;
+  text-decoration: underline;
+}
 
-/* Keyframes for Animations */
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -196,7 +214,7 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
 
   to {

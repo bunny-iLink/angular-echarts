@@ -13,5 +13,5 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Exploring Angular Fundamentals and Data Visualization with ECharts';
+  title = 'E-charts';
 }
